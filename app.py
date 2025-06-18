@@ -5,7 +5,8 @@ import requests
 st.set_page_config(page_title="FastAPI Calculator", layout="centered")
 st.title("🧮 Secure Calculator with Login")
 
-API_URL = "http://localhost:8000"
+API_URL = "https://calculator-api.onrender.com"
+#API_URL = "http://localhost:8000"
 
 if "token" not in st.session_state:
     st.session_state.token = None
