@@ -1,0 +1,18 @@
+pip install -r requirements.txt
+
+
+uvicorn main:app --reload
+
+
+streamlit run app.py
+
+
+docker build -t calc-full .
+docker run -p 8000:8000 calc-full fastapi  # or `streamlit` as entrypoint
+
+
+# Run FastAPI
+uvicorn main:app --reload
+
+# In another terminal
+streamlit run app.py
