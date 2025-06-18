@@ -5,8 +5,16 @@ import requests
 st.set_page_config(page_title="FastAPI Calculator", layout="centered")
 st.title("🧮 Secure Calculator with Login")
 
-API_URL = "https://calculator-api.onrender.com"
+#API_URL = "https://calculator-api.onrender.com"
 #API_URL = "http://localhost:8000"
+import requests
+
+API_URL = "https://calculator-api.onrender.com"  # ✅ Replace with your deployed FastAPI URL
+
+def register_user(username, password):
+    res = requests.post(f"{API_URL}/register", json={"username": username, "password": password})
+    return res.status_code
+
 
 if "token" not in st.session_state:
     st.session_state.token = None
