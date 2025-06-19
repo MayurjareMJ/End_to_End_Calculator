@@ -13,6 +13,7 @@ if "token" not in st.session_state:
 
 # ------------------ AUTH ------------------
 st.title("Welcome to mayur calculator")
+st.title("Welcome Atul")
 
 def register():
     st.title("🔐 Register")
