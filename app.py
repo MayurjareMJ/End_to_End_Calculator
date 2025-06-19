@@ -12,7 +12,7 @@ if "token" not in st.session_state:
 
 
 # ------------------ AUTH ------------------
-st.title("Welcome to mayur calculator app")
+st.title("Welcome to mayur calculator")
 
 def register():
     st.title("🔐 Register")
